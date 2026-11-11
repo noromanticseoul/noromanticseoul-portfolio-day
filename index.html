@@ -28,6 +28,7 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color
 .brand{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;font-size:12px;color:var(--faint);font-weight:600;letter-spacing:.04em}
 .brand b{color:var(--text);font-weight:700}
 .editbtn{font-family:inherit;font-size:12px;font-weight:600;border:.5px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:5px 11px;cursor:pointer}
+.tools{display:flex;gap:6px;flex:none}
 .editbtn[aria-pressed="true"]{background:var(--mark);color:#fff;border-color:var(--mark)}
 header.course{padding:48px 0 8px}
 .eyebrow{font-size:13px;font-weight:600;color:var(--faint);letter-spacing:.02em}
@@ -136,7 +137,7 @@ button:focus-visible,a:focus-visible,textarea:focus-visible,input:focus-visible{
 
   function shell() {
     $("#root").innerHTML = `<nav aria-label="과목과 프로젝트"><div class="wrap">
-        <div class="brand"><span><b>박하민</b> · 21900325 · 시각디자인 포트폴리오</span><button class="editbtn" id="editbtn" type="button" aria-pressed="false" hidden>편집</button></div>
+        <div class="brand"><span><b>박하민</b> · 21900325 · 시각디자인 포트폴리오</span><span class="tools"><button class="editbtn" id="editbtn" type="button" aria-pressed="false" hidden>편집</button><button class="editbtn" id="fsbtn" type="button" ${FS_OK ? "" : "hidden"}>${fsOn() ? "전체화면 종료" : "전체화면"}</button></span></div>
         <div class="row" id="courses" role="tablist"></div><div class="row proj" id="projects"></div></div></nav>
       <main class="wrap" id="view"></main>
       <footer class="wrap">박하민 · 21900325 · 콘텐츠융합디자인학부 시각디자인 전공</footer>`;
@@ -253,6 +254,15 @@ button:focus-visible,a:focus-visible,textarea:focus-visible,input:focus-visible{
   function closeLB() { if (lb) { lb.el.remove(); lb = null; } }
   document.addEventListener("keydown", e => { if (!lb) return; if (e.key === "Escape") closeLB(); if (e.key === "ArrowRight") stepLB(1); if (e.key === "ArrowLeft") stepLB(-1); });
 
+  const FS_OK = !!(document.fullscreenEnabled || document.webkitFullscreenEnabled);
+  function fsOn() { return !!(document.fullscreenElement || document.webkitFullscreenElement); }
+  document.addEventListener("click", e => {
+    if (!e.target.closest || !e.target.closest("#fsbtn")) return;
+    const d = document.documentElement;
+    if (fsOn()) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+    else (d.requestFullscreen || d.webkitRequestFullscreen).call(d);
+  });
+  ["fullscreenchange", "webkitfullscreenchange"].forEach(ev => document.addEventListener(ev, () => { const b = document.getElementById("fsbtn"); if (b) b.textContent = fsOn() ? "전체화면 종료" : "전체화면"; }));
   document.addEventListener("click", e => {
     const c = e.target.closest("[data-c]"); if (c) { goCourse(c.dataset.c); return; }
     const p = e.target.closest("[data-p]"); if (p && p.tagName === "BUTTON") { const el = document.getElementById(p.dataset.p); if (el) el.scrollIntoView(); try { history.replaceState(null, "", "#" + p.dataset.p); } catch (_) {} return; }
