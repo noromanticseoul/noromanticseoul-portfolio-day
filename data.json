@@ -1708,6 +1708,35 @@
     "intro": "일상 속 예술 ‘Letters’와 박물관 속 예술 ‘Olafur Eliasson’을 두 권으로 만들어 한 권으로 노출 제본한 독립출판물입니다. 앞뒤 구분 없이 어느 쪽에서든 읽을 수 있습니다.",
     "media": [
      {
+      "label": "실물",
+      "items": [
+       {
+        "t": "img",
+        "src": "assets_x/v4d1.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/v4d2.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/v4d3.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/v4d4.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/v4d5.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/v4d6.jpg"
+       }
+      ]
+     },
+     {
       "label": "표지",
       "items": [
        {
@@ -3754,6 +3783,388 @@
   ]
  },
  {
+  "id": "wk",
+  "sem": "비교과",
+  "ko": "실무 · 대외활동",
+  "en": "EXTRACURRICULAR — WORK",
+  "track": "graphic",
+  "note": "학교 밖에서 의뢰처·회사와 함께 진행한 작업입니다. 브랜드가 만든 화보·제품 사진은 빼고, 제가 직접 만든 소재와 운영 기록만 넣었습니다.",
+  "projects": [
+   {
+    "id": "wk-gf",
+    "title": "GF Fashion 마케팅 소재",
+    "sub": "C.P. Company · BEAMS KOREA · Palm Angels · COEVO · 2025.03–2026.08",
+    "team": "개인 작업 (재직 중 담당 업무)",
+    "solo": true,
+    "fields": [
+     "광고·CRM 소재",
+     "굿즈",
+     "팝업"
+    ],
+    "client": "GF Fashion (C.P. Company·Palm Angels·BEAMS 국내 전개사)",
+    "intro": "해외 패션 브랜드의 국내 마케터로 일하며 브랜드 카카오톡 메시지(CRM)와 매체 광고 소재를 직접 구성·제작했습니다. BEAMS 국내 첫 공식 팝업(롯데 잠실 에비뉴엘)에서는 기획, 마케팅 소재, 현장 운영과 팝업 스티커 제작을, C.P. Company 가먼트 다잉 팝업에서는 팝업 한정 티셔츠 제작과 VIP 초청을 맡았습니다. BEAMS 팝업은 잠실 롯데월드몰 역대 팝업 중 최다 방문객을 기록했습니다.",
+    "media": [
+     {
+      "label": "C.P. Company 카카오톡 메시지 (CRM)",
+      "items": [
+       {
+        "t": "img",
+        "src": "assets_x/cpk1.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/cpk2.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/cpk3.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/cpk4.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/cpk5.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/cpk6.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/cpk7.jpg"
+       }
+      ]
+     },
+     {
+      "label": "COEVO 광고 소재 (카카오톡)",
+      "items": [
+       {
+        "t": "img",
+        "src": "assets_x/cvk1.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/cvk2.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/cvk3.jpg"
+       }
+      ]
+     },
+     {
+      "label": "팝업 현장 (기획·운영)",
+      "items": [
+       {
+        "t": "img",
+        "src": "assets_x/gf01.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/gf02.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/gf03.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/gf04.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/gf05.jpg"
+       }
+      ]
+     }
+    ],
+    "process": []
+   },
+   {
+    "id": "wk-moodit",
+    "title": "MOODIT",
+    "sub": "포토부스 스타트업 창업팀 · 2022.12–2023.12",
+    "team": "팀 작업 · 창업팀",
+    "fields": [
+     "브랜딩",
+     "UX/UI",
+     "서비스디자인"
+    ],
+    "client": "MOODIT (창업팀, moodit.co.kr)",
+    "intro": "20대를 겨냥한 분위기 중심 포토부스 브랜드를 수익 모델부터 부스 경험까지 만들었습니다. 수익 모델을 세우고 VC 미팅을 했고, 브랜드 아이덴티티와 부스 UX/UI를 디자인하고 사용자 테스트를 진행했습니다. 투자를 받아 건대입구에 1호점을 열었습니다.",
+    "leader": "",
+    "contrib": [
+     {
+      "area": "분석 및 direction",
+      "pct": "",
+      "detail": "수익 모델 수립, VC 미팅"
+     },
+     {
+      "area": "디자인 / 시각화",
+      "pct": "",
+      "detail": "브랜드 아이덴티티, 부스 UX/UI 디자인"
+     },
+     {
+      "area": "프로토타입·결과물 제작",
+      "pct": "",
+      "detail": "사용자 테스트"
+     }
+    ],
+    "media": [
+     {
+      "label": "1호점 · 부스 · 촬영 결과물",
+      "items": [
+       {
+        "t": "img",
+        "src": "assets_x/mdt1.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/mdt2.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/mdt3.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/mdt4.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/mdt5.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/mdt6.jpg"
+       }
+      ]
+     }
+    ],
+    "process": []
+   },
+   {
+    "id": "wk-yulip",
+    "title": "YULIP 숏폼 캠페인",
+    "sub": "초기 뷰티 브랜드 · 프리랜스 · 2023.09–12",
+    "team": "개인 작업 (프리랜스)",
+    "solo": true,
+    "fields": [
+     "영상"
+    ],
+    "client": "YULIP (초기 뷰티 브랜드)",
+    "intro": "MZ세대에게 브랜드를 알리고 웹사이트 유입을 늘리기 위한 숏폼 캠페인을 프로젝트 매니저로 맡아 기획, 촬영, 편집했습니다. 총 조회수 4,402회, 웹사이트 방문 전환율 30%(약 1,200회 방문)를 기록했습니다.",
+    "media": [
+     {
+      "label": "숏폼 영상",
+      "items": [
+       {
+        "t": "video",
+        "src": "assets/wk/yulip1.mp4",
+        "poster": "assets/wk/yulip1_poster.jpg"
+       },
+       {
+        "t": "video",
+        "src": "assets/wk/yulip2.mp4",
+        "poster": "assets/wk/yulip2_poster.jpg"
+       },
+       {
+        "t": "video",
+        "src": "assets/wk/yulip3.mp4",
+        "poster": "assets/wk/yulip3_poster.jpg"
+       }
+      ]
+     }
+    ],
+    "process": []
+   },
+   {
+    "id": "wk-nget",
+    "title": "UNITWIN NGET 아카이브",
+    "sub": "해외 프로그램 기록 저널과 영상",
+    "team": "개인 작업",
+    "solo": true,
+    "fields": [
+     "편집물",
+     "영상",
+     "사진"
+    ],
+    "client": "UNITWIN NGET 프로그램",
+    "intro": "UNITWIN NGET 해외 프로그램을 기록한 저널과 영상을 만들었습니다. 사진·영상 촬영, 색 보정, 글 작성을 맡았습니다.",
+    "links": [
+     [
+      "NGET 기록 영상 (YouTube)",
+      "https://www.youtube.com/watch?v=VM18QIyZcDU"
+     ]
+    ],
+    "media": [
+     {
+      "label": "NGET PNG Journal",
+      "items": [
+       {
+        "t": "img",
+        "src": "assets_x/ng01.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng02.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng03.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng04.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng05.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng06.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng07.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng08.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng09.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng10.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng11.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng12.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng13.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng14.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng15.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng16.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng17.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng18.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng19.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng20.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng21.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng22.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng23.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng24.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng25.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng26.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng27.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng28.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng29.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng30.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng31.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng32.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/ng33.jpg"
+       }
+      ]
+     }
+    ],
+    "process": []
+   }
+  ],
+  "flow": [
+   {
+    "t": "의뢰·목표",
+    "d": "브랜드·클라이언트 목표 확인"
+   },
+   {
+    "t": "기획",
+    "d": "캠페인·콘텐츠·공간 기획"
+   },
+   {
+    "t": "제작",
+    "d": "소재 디자인·촬영·편집"
+   },
+   {
+    "t": "운영",
+    "d": "발행·팝업 현장 운영"
+   },
+   {
+    "t": "성과 측정",
+    "d": "방문·조회·전환 지표"
+   }
+  ]
+ },
+ {
   "id": "ar",
   "sem": "비교과",
   "ko": "AROUND 매거진",
@@ -3875,7 +4286,7 @@
    {
     "id": "ar-space",
     "title": "발견담",
-    "sub": "AROUND 오프라인 작업실 기획·운영",
+    "sub": "AROUND 유료 오프라인 작업실 · 2024.03–08 · 기획·운영",
     "team": "팀 작업 · AROUND",
     "fields": [
      "공간",
@@ -4031,7 +4442,7 @@
    {
     "id": "ar-fair",
     "title": "서울국제도서전 부스",
-    "sub": "2024 서울국제도서전 · 기획·운영 · 질문 카드 패키지",
+    "sub": "2024 서울국제도서전 · 2024.06.26–30 · 기획·운영 · 질문 카드 패키지",
     "team": "팀 작업 · AROUND",
     "fields": [
      "공간",
