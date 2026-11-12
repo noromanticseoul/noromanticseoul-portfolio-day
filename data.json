@@ -278,7 +278,6 @@
   "ko": "그래픽디자인",
   "en": "GRAPHIC DESIGN",
   "track": "graphic",
-  "note": "한 학기 동안 ‘공공미술’을 주제로 포스터, 인포그래픽, 모션 포스터를 만들었습니다.",
   "deck": {
    "label": "중간·기말 발표 (합본)",
    "items": [
@@ -4381,7 +4380,6 @@
   "ko": "AROUND 매거진",
   "en": "EXTRACURRICULAR — AROUND",
   "track": "graphic",
-  "note": "라이프스타일 매거진 AROUND에서 일하며 진행한 프로젝트입니다.",
   "projects": [
    {
     "id": "ar-reels",
