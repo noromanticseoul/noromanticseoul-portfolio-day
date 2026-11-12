@@ -3593,9 +3593,69 @@
         "src": "assets_x/hs_v5284.jpg"
        }
       ]
+     },
+     {
+      "label": "웹 게임 homesick night · 플레이 영상",
+      "items": [
+       {
+        "t": "video",
+        "src": "assets/ex/hs_game.mp4",
+        "poster": "assets/ex/hs_game_poster.jpg"
+       }
+      ]
+     },
+     {
+      "label": "굿즈 결제 페이지 (직접 제작)",
+      "items": [
+       {
+        "t": "img",
+        "src": "assets_x/hs_order_d.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/hs_order_m.jpg"
+       }
+      ]
      }
     ],
     "process": [
+     {
+      "label": "전시 비하인드 — 스탬프 · 캡션 제작",
+      "items": [
+       {
+        "t": "img",
+        "src": "assets_x/hsb_IMG_4375.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/hsb_IMG_4376.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/hsb_IMG_4378.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/hsb_IMG_4381_2.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/hsb_IMG_4983.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/hsb_IMG_4985.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/hsb_IMG_4986.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/hsb_IMG_4990.jpg"
+       }
+      ]
+     },
      {
       "label": "디자인 파일 — 전시 안내 · 작품 캡션 · RSVP · 로고 · 벽지",
       "items": [
@@ -3630,6 +3690,106 @@
        {
         "t": "img",
         "src": "assets_x/hs_wall_001.jpg"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ex-choco",
+    "title": "Choco by PrivateClub",
+    "sub": "homesick 전시 전용 서체 · ChocoLetters",
+    "team": "팀 작업 · Private Club 3인",
+    "fields": [
+     "타이포그래피",
+     "서체"
+    ],
+    "client": "Private Club (homesick 전시)",
+    "leader": "",
+    "intro": "homesick 전시를 위해 셋이 함께 만든 서체입니다. 초콜릿 펜으로 대·소문자, 숫자, 문장부호를 한 글자씩 직접 짜서 쓰고, 이를 스캔·벡터화해 ChocoLetters 폰트 파일로 만들었습니다. 전시 그래픽과 굿즈에 이 서체를 썼습니다.",
+    "contrib": [
+     {
+      "area": "아이디에이션",
+      "pct": "33",
+      "detail": "세 명이 1/3씩 나눠 진행"
+     },
+     {
+      "area": "디자인 / 시각화",
+      "pct": "33",
+      "detail": "초콜릿 펜 글자 제작"
+     },
+     {
+      "area": "프로토타입·결과물 제작",
+      "pct": "33",
+      "detail": "폰트 파일 제작·테스트"
+     }
+    ],
+    "media": [
+     {
+      "label": "서체 견본",
+      "items": [
+       {
+        "t": "img",
+        "src": "assets_x/choco_spec.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/choco_4374.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/choco_f10.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/choco_f5.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/choco_f2.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/choco_f11.jpg"
+       }
+      ]
+     }
+    ],
+    "process": [
+     {
+      "label": "초콜릿 펜으로 글자 만들기",
+      "items": [
+       {
+        "t": "img",
+        "src": "assets_x/choco_p3.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/choco_p4.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/choco_p6.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/choco_p7.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/choco_p1.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/choco_p8.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/choco_p9.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/choco_p12.jpg"
        }
       ]
      }
@@ -3788,7 +3948,7 @@
   "ko": "실무 · 대외활동",
   "en": "EXTRACURRICULAR — WORK",
   "track": "graphic",
-  "note": "학교 밖에서 의뢰처·회사와 함께 진행한 작업입니다. 브랜드가 만든 화보·제품 사진은 빼고, 제가 직접 만든 소재와 운영 기록만 넣었습니다.",
+  "note": "학교 밖에서 의뢰처·회사와 함께 진행한 작업입니다. 제가 직접 만들거나 기획·디렉팅한 결과물만 넣었습니다.",
   "projects": [
    {
     "id": "wk-gf",
@@ -3802,7 +3962,7 @@
      "팝업"
     ],
     "client": "GF Fashion (C.P. Company·Palm Angels·BEAMS 국내 전개사)",
-    "intro": "해외 패션 브랜드의 국내 마케터로 일하며 브랜드 카카오톡 메시지(CRM)와 매체 광고 소재를 직접 구성·제작했습니다. BEAMS 국내 첫 공식 팝업(롯데 잠실 에비뉴엘)에서는 기획, 마케팅 소재, 현장 운영과 팝업 스티커 제작을, C.P. Company 가먼트 다잉 팝업에서는 팝업 한정 티셔츠 제작과 VIP 초청을 맡았습니다. BEAMS 팝업은 잠실 롯데월드몰 역대 팝업 중 최다 방문객을 기록했습니다.",
+    "intro": "해외 패션 브랜드의 국내 마케터로 일하며 브랜드 카카오톡 메시지(CRM)와 매체 광고 소재를 직접 구성·제작했습니다. BEAMS 국내 첫 공식 팝업(롯데 잠실 에비뉴엘)에서는 기획, 마케팅 소재, 현장 운영과 팝업 스티커 제작을, C.P. Company 가먼트 다잉 팝업에서는 팝업 한정 티셔츠 제작과 VIP 초청을 맡았습니다. BEAMS 팝업은 잠실 롯데월드몰 역대 팝업 중 최다 방문객을 기록했습니다. C.P. Company 첫 공식 앰버서더인 RIIZE 소희와 함께한 DAZED 화보와 패션필름은 브랜드팀으로 착장 스타일링, 컨셉, 현장 촬영 디렉팅을 기획하고 마케팅까지 진행했습니다.",
     "media": [
      {
       "label": "C.P. Company 카카오톡 메시지 (CRM)",
@@ -3876,6 +4036,63 @@
        {
         "t": "img",
         "src": "assets_x/gf05.jpg"
+       }
+      ]
+     },
+     {
+      "label": "DAZED 소희 화보 · 패션필름 (브랜드팀 기획)",
+      "items": [
+       {
+        "t": "img",
+        "src": "assets_x/soh01.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/soh02.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/soh03.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/soh04.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/soh05.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/soh06.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/soh07.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/soh08.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/soh09.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/soh10.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/soh11.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/soh12.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/soh13.jpg"
        }
       ]
      }
@@ -4201,7 +4418,33 @@
       "https://www.instagram.com/reel/C_1vsIjs7ur/"
      ]
     ],
-    "media": [],
+    "media": [
+     {
+      "label": "릴스 영상",
+      "items": [
+       {
+        "t": "video",
+        "src": "assets/ar/reel4.mp4",
+        "poster": "assets/ar/reel4_poster.jpg"
+       },
+       {
+        "t": "video",
+        "src": "assets/ar/reel3.mp4",
+        "poster": "assets/ar/reel3_poster.jpg"
+       },
+       {
+        "t": "video",
+        "src": "assets/ar/reel2.mp4",
+        "poster": "assets/ar/reel2_poster.jpg"
+       },
+       {
+        "t": "video",
+        "src": "assets/ar/reel1.mp4",
+        "poster": "assets/ar/reel1_poster.jpg"
+       }
+      ]
+     }
+    ],
     "process": []
    },
    {
@@ -4222,19 +4465,23 @@
       "items": [
        {
         "t": "img",
-        "src": "assets_x/nl63_0.jpg"
+        "src": "assets_x/nlb63_0.jpg"
        },
        {
         "t": "img",
-        "src": "assets_x/nl63_1.jpg"
+        "src": "assets_x/nlb63_1.jpg"
        },
        {
         "t": "img",
-        "src": "assets_x/nl63_2.jpg"
+        "src": "assets_x/nlb63_2.jpg"
        },
        {
         "t": "img",
-        "src": "assets_x/nl63_3.jpg"
+        "src": "assets_x/nlb63_3.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/nlb63_4.jpg"
        }
       ]
      },
@@ -4243,19 +4490,23 @@
       "items": [
        {
         "t": "img",
-        "src": "assets_x/nl57_0.jpg"
+        "src": "assets_x/nlb57_0.jpg"
        },
        {
         "t": "img",
-        "src": "assets_x/nl57_1.jpg"
+        "src": "assets_x/nlb57_1.jpg"
        },
        {
         "t": "img",
-        "src": "assets_x/nl57_2.jpg"
+        "src": "assets_x/nlb57_2.jpg"
        },
        {
         "t": "img",
-        "src": "assets_x/nl57_3.jpg"
+        "src": "assets_x/nlb57_3.jpg"
+       },
+       {
+        "t": "img",
+        "src": "assets_x/nlb57_4.jpg"
        }
       ]
      },
@@ -4264,19 +4515,19 @@
       "items": [
        {
         "t": "img",
-        "src": "assets_x/nl48_0.jpg"
+        "src": "assets_x/nlb48_0.jpg"
        },
        {
         "t": "img",
-        "src": "assets_x/nl48_1.jpg"
+        "src": "assets_x/nlb48_1.jpg"
        },
        {
         "t": "img",
-        "src": "assets_x/nl48_2.jpg"
+        "src": "assets_x/nlb48_2.jpg"
        },
        {
         "t": "img",
-        "src": "assets_x/nl48_3.jpg"
+        "src": "assets_x/nlb48_3.jpg"
        }
       ]
      }
