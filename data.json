@@ -3379,7 +3379,6 @@
   "ko": "Typography Design 1",
   "en": "TYPOGRAPHY DESIGN 1",
   "track": "graphic",
-  "note": "인쇄물은 리뷰 당일 별도로 지참합니다.",
   "projects": [
    {
     "id": "ty-bodoni",
@@ -3944,7 +3943,6 @@
   "ko": "실무 · 대외활동",
   "en": "EXTRACURRICULAR — WORK",
   "track": "graphic",
-  "note": "학교 밖에서 의뢰처·회사와 함께 진행한 작업입니다. 제가 직접 만들거나 기획·디렉팅한 결과물만 넣었습니다.",
   "projects": [
    {
     "id": "wk-gf",
