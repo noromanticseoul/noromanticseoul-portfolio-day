@@ -1711,6 +1711,10 @@
       "items": [
        {
         "t": "img",
+        "src": "assets_x/v4main.jpg"
+       },
+       {
+        "t": "img",
         "src": "assets_x/v4d1.jpg"
        },
        {
