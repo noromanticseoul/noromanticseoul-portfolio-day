@@ -43,6 +43,7 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;font-we
 .sub{font-size:16px;color:var(--sub);margin:0}
 .team{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:14px;font-size:14px;color:var(--sub)}
 .team b{color:var(--text);font-weight:600}
+.team b.me{font-weight:800;color:var(--text)}.team .oth{font-weight:300;color:var(--sub)}.team .tl{color:var(--faint)}
 .flow{background:var(--card);border-radius:20px;padding:20px 24px 22px;margin:20px 0 0}
 .flow h3{margin:0 0 14px;font-size:15px;font-weight:700;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .flow h3 span{font-size:12px;font-weight:500;color:var(--faint)}
@@ -227,7 +228,7 @@ html{overflow-x:clip}
       h += `<section class="project" id="${pid}">
         <div class="mark"><span class="ch">CH.${ch}-${n}</span><span>${esc(SHORT[c.ko] || c.ko)} · ${esc((p.fields || []).join(" · "))}</span></div>
         <h2>${esc(p.title)}</h2><p class="sub">${esc(p.sub)}</p>
-        ${p.team && !p.solo ? `<div class="team">${p.team.split(" · ").map((x, k) => k < 2 ? `<span>${esc(x)}</span>` : `<b>${esc(x)}</b>`).join("")}</div>` : `<div class="team"><span>${esc(p.team)}</span></div>`}
+        <div class="team">${teamHTML(p.team)}</div>
         <div class="card desc${edit ? " edit" : ""}"><div><h4>소개</h4>${edit ? `<textarea data-f="intro" data-p="${pid}">${esc(P.intro)}</textarea>${p.solo ? `<label style="display:block;margin-top:10px;font-size:13px;color:var(--faint)">의뢰한 개인·단체 (비교과만)<input type="text" data-f="client" data-p="${pid}" value="${esc(P.client)}"></label><p class="savestate" id="ss-${pid}"></p>` : ""}`
           : (P.intro ? `<p>${esc(P.intro)}</p>` : `<p class="solo">소개 글 준비 중입니다.</p>`)}
           ${p.game ? `<a class="linkbtn" href="${esc(p.game)}" target="_blank" rel="noopener">직접 만든 게임 플레이하기 ↗</a>` : ""}
@@ -241,6 +242,7 @@ html{overflow-x:clip}
   }
 
 
+  const teamHTML = s => String(s || "").split(" · ").map((x, k) => k === 0 ? `<span class="tl">${esc(x)}</span>` : x.trim() === "박하민" ? `<b class="me">${esc(x)}</b>` : `<span class="oth">${esc(x)}</span>`).join("");
   function renderMain() {
     const PRJ = Object.fromEntries(DATA.flatMap(c => c.projects).map(p => [p.id, p]));
     const part = (tr, en, ko) => {
@@ -251,7 +253,7 @@ html{overflow-x:clip}
         const strip = m.process.map(x => `<figure><img src="${esc(x.src)}" alt="${esc(x.cap)}" loading="lazy" decoding="async"><figcaption>${esc(x.cap)}</figcaption></figure>`).join("");
         const res = m.results.map(r => `${r.label ? `<div class="sec-label">${esc(r.label)}</div>` : ""}<div class="gal${m.row ? " big" : ""}">${r.items.map(s => `<figure><img src="${esc(s)}" alt="" loading="lazy" decoding="async"></figure>`).join("")}</div>`).join("");
         return `<article class="mw" id="m-${m.pid}"><div class="mwtop"><div class="mwt"><div class="chmark">${m.mark} · ${esc(m.field)} · ${esc(m.when === "0000" ? "비교과" : m.when)} · ${esc(m.course)}</div>
-          <h3>${esc(P.title)}</h3><p class="sub">${esc(P.sub)}</p><p class="mteam">${esc(P.team)}</p><p class="mintro">${esc(m.intro || P.intro)}</p>
+          <h3>${esc(P.title)}</h3><p class="sub">${esc(P.sub)}</p><p class="mteam team">${teamHTML(P.team)}</p><p class="mintro">${esc(m.intro || P.intro)}</p>
           <div class="card mrole">${shareHTML(p, m.pid)}</div><button class="more" type="button" data-go="${m.pid}" data-gc="${m.cid}">과목에서 자세히 보기 →</button></div>
           <div class="mwi"><img src="${esc(m.hero)}" alt="${esc(P.title)} 대표 이미지"></div></div>
           ${m.stages.length ? `<div class="gal-h"><h3>프로세스</h3></div><ol class="stages">${m.stages.map((s, i) => `<li><div class="stt"><b>${i + 1}</b><h4>${esc(s.t)}</h4><p>${esc(s.d)}</p></div><img src="${esc(s.img)}" alt="${esc(s.t)}" loading="lazy" decoding="async"></li>`).join("")}</ol>`
