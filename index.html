@@ -155,6 +155,8 @@ button:focus-visible,a:focus-visible,textarea:focus-visible,input:focus-visible{
 .bk-nav{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:12px}
 .bk-nav button{font:inherit;font-size:20px;width:38px;height:38px;border-radius:50%;border:.5px solid var(--line);background:var(--card);color:var(--text);cursor:pointer}
 .bk-cnt{font-size:13px;color:var(--faint);min-width:64px;text-align:center;font-variant-numeric:tabular-nums}
+#view img{cursor:zoom-in}
+.bk-nav .bk-zoom{width:auto;border-radius:999px;font-size:13px;font-weight:600;padding:0 14px;margin-left:6px}
 /* 양끝 잘림 방지: 탭은 줄바꿈, 갤러리는 화면 끝까지 */
 html{overflow-x:clip}
 @media (min-width:641px){ .row{flex-wrap:wrap;overflow:visible} }
@@ -275,7 +277,7 @@ html{overflow-x:clip}
   function bookHTML(s, key) {
     const b = bookPages(s.items, s.cover, s.spread); b.i = (BOOKS[key] && BOOKS[key].i) || 0; BOOKS[key] = b;
     return `<div class="book" data-book="${esc(key)}" style="--ar:${(b.ar * 2).toFixed(4)}"><div class="bk-stage"><div class="bk-pg l"></div><div class="bk-pg r"></div><div class="bk-spine"></div></div>
-      <div class="bk-nav"><button type="button" data-bk="prev" aria-label="이전 쪽">‹</button><span class="bk-cnt"></span><button type="button" data-bk="next" aria-label="다음 쪽">›</button></div></div>`;
+      <div class="bk-nav"><button type="button" data-bk="prev" aria-label="이전 쪽">‹</button><span class="bk-cnt"></span><button type="button" data-bk="next" aria-label="다음 쪽">›</button><button type="button" class="bk-zoom" data-bk="zoom" aria-label="크게 보기">크게 보기</button></div></div>`;
   }
   function paintBook(el) {
     const b = BOOKS[el.dataset.book]; if (!b) return; const [L, R] = b.spreads[b.i];
@@ -297,7 +299,7 @@ html{overflow-x:clip}
     setTimeout(() => { b.i = ni; leaf.remove(); delete el.dataset.busy; paintBook(el); }, 620);
   }
   document.addEventListener("click", e => {
-    const bt = e.target.closest("[data-bk]"); if (bt) { flip(bt.closest(".book"), bt.dataset.bk === "next" ? 1 : -1); return; }
+    const bt = e.target.closest("[data-bk]"); if (bt && bt.dataset.bk !== "zoom") { flip(bt.closest(".book"), bt.dataset.bk === "next" ? 1 : -1); return; }
     const pg = e.target.closest(".bk-pg"); if (pg) flip(pg.closest(".book"), pg.classList.contains("r") ? 1 : -1);
   });
   document.addEventListener("keydown", e => { if (lb) return; const bk = document.querySelector(".book:hover"); if (!bk) return; if (e.key === "ArrowRight") flip(bk, 1); if (e.key === "ArrowLeft") flip(bk, -1); });
@@ -353,11 +355,14 @@ html{overflow-x:clip}
   // lightbox
   let lb = null;
   function openLB(key, i) {
+    if (Array.isArray(key)) return openLBItems(key, i);
     const [pid, kind, si] = key.split("|");
     let secs;
     if (kind === "deck") secs = [DATA.find(c => c.id + "-deck" === pid).deck];
     else { const p = DATA.flatMap(c => c.projects).find(x => x.id === pid); secs = (kind === "media" ? p.media : p.process).filter(s => s.items.length); }
-    const items = secs[+si].items.filter(x => x.t === "img");
+    return openLBItems(secs[+si].items.filter(x => x.t === "img"), i);
+  }
+  function openLBItems(items, i) {
     lb = { items, i: +i };
     const el = document.createElement("div"); el.className = "lb"; el.setAttribute("role", "dialog"); el.setAttribute("aria-label", "크게 보기");
     el.innerHTML = `<img alt=""><button class="x" type="button" aria-label="닫기">×</button><button class="pv" type="button" aria-label="이전">‹</button><button class="nx" type="button" aria-label="다음">›</button><div class="cnt"></div>`;
@@ -384,7 +389,13 @@ html{overflow-x:clip}
     const c = e.target.closest("[data-c]"); if (c) { goCourse(c.dataset.c); return; }
     const p = e.target.closest("[data-p]"); if (p && p.tagName === "BUTTON") { const el = document.getElementById(p.dataset.p); if (el) el.scrollIntoView(); try { history.replaceState(null, "", "#" + p.dataset.p); } catch (_) {} return; }
     const j = e.target.closest("[data-jump]"); if (j) { e.preventDefault(); const [cid, pid] = j.dataset.jump.split("|"); goCourse(cid, pid); return; }
-    const im = e.target.closest("img[data-g]"); if (im) openLB(im.dataset.g, im.dataset.i);
+    const im = e.target.closest("img[data-g]"); if (im) { openLB(im.dataset.g, im.dataset.i); return; }
+    const zb = e.target.closest('[data-bk="zoom"]');
+    if (zb) { const bk = zb.closest(".book"), b = BOOKS[bk.dataset.book], srcs = [...new Set(b.spreads[b.i].filter(Boolean).map(p => p.src))]; openLBItems(srcs.map(src => ({ src })), 0); return; }
+    const gi = e.target.closest("#view img"); if (gi && !gi.closest(".lb")) {
+      const grp = gi.closest(".gal, .mstrip, .stages, .mwtop") || gi.parentElement;
+      const imgs = [...grp.querySelectorAll("img")]; openLBItems(imgs.map(x => ({ src: x.currentSrc || x.src })), Math.max(0, imgs.indexOf(gi)));
+    }
   });
 
   // editing (owner/editors only) → db
